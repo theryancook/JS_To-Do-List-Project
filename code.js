@@ -34,3 +34,7 @@ function removeMe(item) {
     let parent = item.parentElement;
     parent.parentElement.removeChild(parent);
 }
+
+removeAll.onclick = () => {
+    ul.innerHTML = "";
+}
