@@ -16,10 +16,16 @@ function addLi(targetUi) {
     document.getElementById("text").value = " ";
 
     if (inputText.length === 0) {
-        alert("Please add your to-dop item");
+        alert("Please add your to-do item");
         return false
     }
 
     removeButton.className = "removeMe";
-    removeButton.innerHTML = "Done!"
+    removeButton.innerHTML = "Done!";
+    removeButton.setAttribute("onclick", "removeMe(this)");
+
+    li.appendChild(textNode);
+    li.appendChild(removeButton);
+
+    targetUi.appendChild(li)
 }
