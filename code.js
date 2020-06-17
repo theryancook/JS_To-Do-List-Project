@@ -4,7 +4,7 @@ let removeAll = document.getElementById("removeAll");
 let add = document.getElementById("add");
 
 // Then we need to make some functions that manipulate the elements
-add.onclick = function () {
+add.onclick = () => {
     addLi(ul);
 }
 
@@ -28,4 +28,9 @@ function addLi(targetUi) {
     li.appendChild(removeButton);
 
     targetUi.appendChild(li)
+}
+
+function removeMe(item) {
+    let parent = item.parentElement;
+    parent.parentElement.removeChild(parent);
 }
