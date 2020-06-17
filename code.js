@@ -21,7 +21,7 @@ function addLi(targetUi) {
     }
 
     removeButton.className = "removeMe";
-    removeButton.innerHTML = "Done!";
+    removeButton.innerHTML = "Remove Item";
     removeButton.setAttribute("onclick", "removeMe(this)");
 
     li.appendChild(textNode);
